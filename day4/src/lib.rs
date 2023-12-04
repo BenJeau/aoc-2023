@@ -44,10 +44,8 @@ pub fn solve_part_2(file_content: &str) -> usize {
             let count_of_index_in_buffer = buffer.get(&index).copied().unwrap_or(0) + 1;
 
             for i in (index)..(index + number_of_matches) {
-                for _ in 0..count_of_index_in_buffer {
-                    buffer.entry(i + 1).or_insert(0);
-                    *buffer.get_mut(&(i + 1)).unwrap() += 1;
-                }
+                buffer.entry(i + 1).or_insert(0);
+                *buffer.get_mut(&(i + 1)).unwrap() += count_of_index_in_buffer;
             }
 
             acc + count_of_index_in_buffer
