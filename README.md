@@ -10,4 +10,10 @@ To run the solutions, you need to have [Rust](https://www.rust-lang.org/) instal
 cd day1 && cargo run --bin part_1
 ```
 
+Or to run the tests (sample scenarios):
+
+```bash
+cd day1 && cargo test
+```
+
 There's a Cargo project created for every day, with a `part_1` and `part_2` binary. The input is read from the `input` file in the project root.
