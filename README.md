@@ -17,3 +17,19 @@ cd day1 && cargo test
 ```
 
 There's a Cargo project created for every day, with a `part_1` and `part_2` binary. The input is read from the `input` file in the project root.
+
+## Development of solutions
+
+When developing the solutions, having the following running is useful to automatically run your tests and if they pass, then run it against the real input after file changes (this requires https://crates.io/crates/cargo-watch):
+
+```bash
+cargo watch -x 'test --lib' -x 'run --bin part_1 --release' -x 'run --bin part_2 --release'
+```
+
+## Create new day
+
+You can run the following bash script which creates a new cargo project:
+
+```bash
+./setup_next_day.sh
+```
